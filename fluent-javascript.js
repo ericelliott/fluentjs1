@@ -298,7 +298,7 @@ var membership = {
       this.members[member.name] = member;
       return this;
     },
-    check: function (name) {
+    getMember: function (name) {
       return this.members[name];
     }
   },
@@ -344,7 +344,7 @@ var membership = {
     ok(bar.add({
         name:'johnny',
         joined: new Date()})
-      .check('johnny'),
+      .getMember('johnny'),
         'Membership mixin works.');
   });
 
